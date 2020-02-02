@@ -1,0 +1,47 @@
+The entire file content is in memory.
+Encrypting a file of 32 characters.
+i is1
+data is a
+i is3
+data is l
+i is5
+data is I
+i is7
+data is }
+i is9
+data is n
+i is11
+data is n
+i is13
+data is n
+i is15
+data is a
+i is17
+data is a
+i is19
+data is a
+i is21
+data is a
+i is23
+data is a
+i is25
+data is a
+i is27
+data is a
+i is29
+data is a
+i is31
+data is 
+
+Encryption (sequential): 		0.000036 seconds.
+The entire file content was written to file.
+Encrypt (kernel): 		0.000144 seconds.
+Encrypt (memory): 		0.000061 seconds.
+The entire file content was written to file.
+The entire file content is in memory.
+Decrypting a file of 32characters
+comes into the evencomes into the evencomes into the evencomes into the evencomes into the evencomes into the evencomes into the evencomes into the evencomes into the evencomes into the evencomes into the evencomes into the evencomes into the evencomes into the evencomes into the evencomes into the evenDecryption (sequential): 		0.000002 seconds.
+The entire file content was written to file.
+Decrypt (kernel): 		0.000023 seconds.
+Decrypt (memory): 		0.000041 seconds.
+The entire file content was written to file.
