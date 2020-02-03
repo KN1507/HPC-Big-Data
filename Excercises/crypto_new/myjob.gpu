@@ -1,6 +1,0 @@
-#!/bin/bash
-#SBATCH -t 1:00
-#SBATCH -n 1 
-#SBATCH -p gpu_short 
-cd $HOME/Excercises/crypto_new
-srun ./encrypt

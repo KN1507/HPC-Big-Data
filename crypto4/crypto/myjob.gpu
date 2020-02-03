@@ -1,0 +1,5 @@
+#!/bin/bash
+#SBATCH -t 30:00
+#SBATCH -n 1
+cd $HOME/Downloads/Exercises/example/crypto4/crypto
+srun ./encrypt
