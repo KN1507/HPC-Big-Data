@@ -1,0 +1,9 @@
+a.out
+hello-omp
+primes
+primes-mpi
+stencil-mpi
+hello
+README.md
+*.o
+slurm-*.out
