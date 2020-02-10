@@ -6,12 +6,14 @@
 
 #define R 10
 
-int matrix[SIZE*SIZE], vector[SIZE], result[SIZE];
-
 int main(int argc, char *argv[])
 {
+  
   int rank, size, matrix_start, matrix_end, n;
   n = SIZE;
+  int *matrix = malloc(n*n * sizeof(int));
+  int *vector = malloc(n * sizeof(int));
+  int *result = malloc(n * sizeof(int));
   clock_t tic = clock();
   	printf("Fill Matrix : \n");
             for (int i=0; i<n*n; i++) {
