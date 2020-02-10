@@ -2,11 +2,11 @@
 #include <stdlib.h>
 #include <time.h>
 
-#define SIZE 8  // Size of matrix and vector
+#define SIZE 3  // Size of matrix and vector
 
 #define R 10
 
-int matrix[SIZE][SIZE], vector[SIZE], result[SIZE];
+int matrix[SIZE*SIZE], vector[SIZE], result[SIZE];
 
 int main(int argc, char *argv[])
 {
@@ -15,8 +15,7 @@ int main(int argc, char *argv[])
   clock_t tic = clock();
   	printf("Fill Matrix : \n");
             for (int i=0; i<n*n; i++) {
-                for (int j=0;j<n;++j)
-                    matrix[i][j] = i+j;
+                    matrix[i] = i;
             }
             for (int i=0; i<n; i++)
     	        vector[i] = i;
@@ -25,23 +24,33 @@ int main(int argc, char *argv[])
                 result[i] = 0;
             }
 
-  int j=0; //Row no..
+//   int j=0; //Row no..
+//   for (int p=0; p<R; ++p) {
+//       for (int i=0; i<n; i++) {
+//         for (int j=0;j<n;++j) {
+//             result[i] += matrix[i][j] * vector[j];
+//         }
+//       }
+//   }
+
   for (int p=0; p<R; ++p) {
-      for (int i=0; i<n; i++) {
-        for (int j=0;j<n;++j) {
-            result[i] += matrix[i][j] * vector[j];
-        }
+      for (int i=0; i<n*n; ++i) {
+          int res = 0;
+          for (int j=0;j<n;++j){
+              res += matrix[i*n+j]*vector[j];
+          }
+          result[i] = res;
       }
   }
+
 
   clock_t toc = clock();
 
     printf("Matrix: \n");
-    for(int i=0;i<n;++i) {
-        for (int j=0; j< n; ++j) {
-            printf("%d\t",matrix[i][j]);
-        }
-        printf("\n");
+    for(int i=0;i<n*n;++i) {
+        if(i%n == 0)
+            printf("\n");
+        printf("%d\t",matrix[i]);
     }
     printf("\n");
     printf("\nVector: \n");
